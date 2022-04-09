@@ -63,7 +63,7 @@ Crie um método chamado `nomeCompleto`, que retorne a frase:
 - "Olá! Meu nome é [NOME] [SOBRENOME]!"
 */
 pessoa.nomeCompleto = function(){
-    return pessoa.nome + ' ' + pessoa.sobrenome;
+    return 'Olá! Meu nome é ' + pessoa.nome + ' ' + pessoa.sobrenome + '!';
 };
 
 /*
@@ -87,7 +87,7 @@ Crie um método chamado `mostrarAltura` que retorne a frase:
 - "Minha altura é [ALTURA]m."
 */
 pessoa.mostrarAltura = function(){
-    return 'Minha altura é ' + pessoa.altura + ' m.'
+    return 'Minha altura é ' + pessoa.altura + 'm.'
 }
 
 /*
@@ -95,7 +95,7 @@ Agora vamos brincar um pouco com o objeto criado:
 Qual o nome completo da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-pessoa.nomeCompleto(); // Evandro Lima
+pessoa.nomeCompleto(); // Olá! Meu nome é Evandro Lima!
 console.log(pessoa.nomeCompleto()); // Teste
 
 
@@ -103,22 +103,22 @@ console.log(pessoa.nomeCompleto()); // Teste
 Qual a idade da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-pessoa.idade; // 23
-console.log(pessoa.idade); // Teste
+pessoa.mostrarIdade(); // Olá, eu tenho 23 anos!
+console.log(pessoa.mostrarIdade()); // Teste
 
 /*
 Qual o peso da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-pessoa.peso; // 65
-console.log(pessoa.peso); // Teste
+pessoa.mostrarPeso(); // Eu peso 65 Kg.
+console.log(pessoa.mostrarPeso()); // Teste
 
 /*
 Qual a altura da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-pessoa.altura; // 1.65
-console.log(pessoa.altura); // Teste
+pessoa.mostrarAltura(); // Minha altura é 1.65m.
+console.log(pessoa.mostrarAltura()); // Teste
 
 
 /*
@@ -192,15 +192,21 @@ pessoa.apresentacao = function(){
     var idadeAnos = 'anos';
     var metrosCaminhados = 'metros'
 
-    if( pessoa.sexo === 'Feminimo'){
+    if (pessoa.sexo === 'Feminimo'){
         sexo = 'a'
-    } if (pessoa.idade === 1){
+    } 
+    
+    if (pessoa.idade === 1){
         idadeAnos = 'ano'
-    } if (pessoa.caminhouQuantosMetros === 1){
+    } 
+    
+    if (pessoa.caminhouQuantosMetros === 1){
         metrosCaminhados = 'metro'
     }
     return 'Olá, eu sou ' + sexo + ' ' + pessoa.nome + ', tenho ' + pessoa.idade + ' ' + idadeAnos + ', ' + 'meu peso é ' + pessoa.peso + ' e, só hoje, eu já caminhei ' + pessoa.caminhouQuantosMetros + ' ' + metrosCaminhados + '!';
 }
-console.log(pessoa.apresentacao());
+
 
 // Agora, apresente-se ;)
+pessoa.apresentacao(); // Olá, eu sou o Evandro, tenho 26 anos, meu peso é 65 e, só hoje, eu já caminhei 610 metros!
+console.log(pessoa.apresentacao()); // Teste
